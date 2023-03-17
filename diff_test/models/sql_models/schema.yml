@@ -1,0 +1,25 @@
+version: 2
+
+models:
+  - name: employee_details
+    columns:
+      - name: s.no
+        tests:
+          - unique
+          - not_null
+      - name: first_name
+        tests:
+          - unique
+          - not_null
+      - name: last_name
+        tests:
+          - unique
+          - not_null
+      - name: country
+        tests:
+          - accepted_values:
+              values: ['India', 'Pakistan', 'Sweden']
+      - name: phone_no
+        tests:
+          - unique
+          - not_null
